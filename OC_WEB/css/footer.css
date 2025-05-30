@@ -1,0 +1,96 @@
+/* Footer Styles */
+footer {
+  background-color: #621804;
+  color: var(--text-white);
+  padding: var(--space-5) 0 var(--space-2);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: var(--space-4);
+  margin-bottom: var(--space-4);
+}
+
+.footer-logo h3 {
+  color: var(--text-white);
+  font-size: 1.8rem;
+  margin-bottom: var(--space-1);
+}
+
+.footer-logo p {
+  color: var(--secondary);
+  font-style: italic;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.link-column h4 {
+  color: var(--secondary);
+  font-size: 1.2rem;
+  margin-bottom: var(--space-2);
+  position: relative;
+  padding-bottom: var(--space-1);
+}
+
+.link-column h4::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: var(--secondary);
+  bottom: 0;
+  left: 0;
+}
+
+.link-column ul li {
+  margin-bottom: var(--space-1);
+}
+
+.link-column a {
+  color: var(--gray-300);
+  transition: var(--transition);
+}
+
+.link-column a:hover {
+  color: var(--secondary);
+  padding-left: var(--space-1);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--space-3);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Footer */
+@media screen and (max-width: 992px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+  
+  .footer-logo {
+    text-align: center;
+    margin-bottom: var(--space-2);
+  }
+  
+  .footer-links {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .footer-links {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+  
+  .link-column {
+    margin-bottom: var(--space-2);
+  }
+}
